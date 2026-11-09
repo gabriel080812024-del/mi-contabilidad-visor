@@ -1,5 +1,5 @@
 // Guarda la app en el teléfono para que funcione sin internet. No guarda ni envía datos de la contabilidad.
-const VERSION = 'visor-v2';
+const VERSION = 'visor-v3';
 const ARCHIVOS = ['./', 'index.html', 'visor.js', 'visor.css', 'manifest.webmanifest', 'icono-180.png', 'icono-192.png', 'icono-512.png'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(VERSION).then(c => c.addAll(ARCHIVOS)).then(() => self.skipWaiting()));
